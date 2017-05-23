@@ -14,15 +14,17 @@ export default class ChatContainer extends Component{
     }
 
     static propTypes = {
-        dataSource: PropTypes.array.isRequired
+        dataSource: PropTypes.array.isRequired,
+        onPress: PropTypes.func
     }
 
     render(){
+        const { onPress } = this.props
         return(
             <ListView 
                 dataSource = {this.state.dataSource}
                 renderRow = {(rowData) => 
-                    <ChatItem index = {rowData}/>
+                    <ChatItem index = {rowData} onPress = {onPress}/>
                 }
             />
         )

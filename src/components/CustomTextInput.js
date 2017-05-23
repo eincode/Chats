@@ -44,8 +44,7 @@ export default class CustomTextInput extends Component{
 
 const styles = StyleSheet.create({
     container : {
-        marginTop: 2,
-        marginBottom: 10
+        marginTop: 2
     },
     textInputWrapper: {
         height: 42,

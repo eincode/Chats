@@ -50,6 +50,7 @@ export default class LoginForm extends Component{
                         onChangeText = {(value) => this.setState({email: value})}
                         isEnabled = {!isLoading}
                     />
+                    <View style = {styles.divider}/>
                     <CustomTextInput 
                         name = {'password'}
                         ref = {(ref) => this.passwordInputRef = ref}
@@ -61,6 +62,7 @@ export default class LoginForm extends Component{
                         onChangeText = {(value) => this.setState({password: value})}
                         isEnabled = {!isLoading}
                     />
+                    <View style = {styles.divider}/>
                 </View>
                 <View style = {styles.footer}>
                     <View ref = {(ref) => this.buttonRef = ref} animation = {'bounceIn'} duration = {600} delay = {400}>
@@ -91,6 +93,9 @@ export default class LoginForm extends Component{
 const styles = StyleSheet.create({
     container: {
         paddingHorizontal : metrics.DEVICE_WIDTH * 0.1
+    },
+    divider: {
+        height: 10
     },
     form: {
         marginTop: 20
